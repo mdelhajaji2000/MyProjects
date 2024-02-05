@@ -175,7 +175,7 @@ string Table_Body(stTable Table) {
     return TableBody;
 }
 
-stTable TableSettingsEditor() {
+stTable TableSettingsEditor() { //Dont forgot to edit the messages of edits in the next version
     static stTable Table;
     int user_choice;
 
