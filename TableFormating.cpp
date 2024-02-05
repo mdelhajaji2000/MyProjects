@@ -159,7 +159,7 @@ string AddRow(stTable Table) {
 
 string Table_Body(stTable Table) {
     string TableBody = "";
-    string Space = rowSpace(Table.Colone_1_width, Table.Large_colone_width, Table.Colone_2_width, Table.Space_char);
+    string Space = rowSpace(Table.Colone_1_width, Table.Large_colone_width, Table.Colone_2_width, '-');
     int Colon_index = 0;
 
     do {
@@ -253,10 +253,14 @@ void main_menu() {
 }
 
 void Gethelp() {
+    // This function will be availble soon!
     // Provide help information here
 }
 
 int main() {
     main_menu();
     return 0;
+    // use this app in Login Systeme app using C++20
+    // Fix The ortograph mistakes
 }
+// Beta finshed the : 05/02/2024 at 01:12
