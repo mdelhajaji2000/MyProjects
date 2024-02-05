@@ -3,6 +3,7 @@
 #include <limits>
 #include <cstdio>
 #include <string>
+#include <cstdlib>
 
 using namespace std;
 
@@ -11,12 +12,12 @@ struct stTable {
     int Colone_2_width = 15;
     int Large_colone_width = 45;
     char Left_or_Right = 'L'; // R or L || r or l {'l' = left} {'R' = right}
-    string Colone_1_title = "Example:";
+    string Colone_1_title = "Colone 1 Here";
     string Large_colone_title = "Large Colone Here";
-    string Colone_2_title = "Colone 2";
-    string Colon_1_string;
-    string Colon_2_string;
-    string Colone_Larg_string;
+    string Colone_2_title = "Colone 2 Here";
+    string Colon_1_string = "Colon_1_string";
+    string Colon_2_string = "Colon_1_string";
+    string Colone_Larg_string = "Large_Colone_string";
     char Space_char = '=';
 };
 
@@ -227,12 +228,8 @@ void FunctionsManger(int userCh) {
             cout << Export_string_table(Table_Body(tableset), table_Head(tableset));
             break;
         case 3:
-            // Call Gethelp() or do something else
+            exit(0);
             break;
-        case 4:
-            // When you finish the table creator function use it to create a default table
-            break;
-        default:
             cout << "Invalid choice!" << endl;
             break;
     }
@@ -246,12 +243,13 @@ void main_menu() {
     cout << "Welcome To Table Formatting app created using C++" << endl;
     cout << "~ Type [1]: to edit table settings" << endl;
     cout << "~ Type [2]: to create the table" << endl;
-    cout << "~ Type [3]: to get help" << endl;
-    cout << "~ Type [4]: to see example Default table" << endl;
+    cout << "~ Type [3]: to close The app (;" << endl;
 
     int user_choice;
     ReadPositifNumber(user_choice, "=> ");
     FunctionsManger(user_choice);
+
+    main_menu();
 }
 
 void Gethelp() {
